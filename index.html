@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+</head>
+<style>
+  body{
+   
+  background-color: #118650;
+  color:#118650;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+    }
+    input {
+    padding:5px; 
+    border:2px solid #118650;
+    border-radius: 2px;
+    align-content:center;
+    margin: 4px;
+    outline:#CCF2AC;
+  }
+  
+    h1{
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      color: #118650;
+      border:1px solid #118650;
+      padding:5px;
+      border-radius: 2px;
+      text-align: center;
+    }
+
+ 
+    input:focus{
+  border:2px solid #CCF2AC;
+}
+
+  label{
+    width:90px;
+    display: inline-block;
+    
+  }
+
+  button {
+    padding:7px ; 
+    background:#118650; 
+    color: hsl(0, 0%, 100%);
+    border: none;
+    cursor:pointer;
+    border-radius: 2px; 
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.13);
+  }
+    
+  .box-shadow {
+      font-family: cursive, sans-serif;
+      background-color: #CCF2AC;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow:0 8px 16px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.13);
+  }
+</style>
+<body>
+  <div class="box-shadow">
+   <h1>Input Field</h1>
+  <div id="form">
+    <form action="#" id="userForm">
+      <label for="userName">User:</label>
+      <input
+      type="text"
+      id="userName"
+      placeholder="Username"
+      required
+      autofocus
+      >
+      <div>
+    <label for="age">Age:</label>
+    <input
+          type="number"
+          id="age"
+          placeholder="Age"
+          required
+        />
+        </div>
+        <div>
+        <label for="key1">Key:</label>
+        <input
+         type="text"
+         id="key" 
+         placeholder="Enter key"
+          required />
+        <button type="submit">Save user</button>
+    </form>
+    </div>
+    <div>
+    <label for="key">Retrieve user:</label>
+      <input
+        type="text"
+        id="retrieveKey"
+        placeholder="Enter Passcode"
+        required
+        />
+      <button id="retrieveButton">Retrieve user</button>
+      <div id="userData"></div>
+      <label for="removeKey">Delete user:</label>
+      <input
+        type="text"
+        id="removeKey"
+        placeholder="RemoveKey"
+        required
+        >
+        <button id="removeButton">Delete user</button>
+        <button id="clearButton">Delete all users</button>
+        </div>
+  </div>
+  <script src="/storage.js"></script>
+</body>
+</html>
